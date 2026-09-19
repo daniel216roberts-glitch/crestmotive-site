@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  :root{
+    --black:#0a0a0a;
+    --yellow:#f4c11f;
+    --yellow-soft:#f9d666;
+    --cream:#f3ead6;
+    --cream-dim:#a79f8d;
+    --panel:#141310;
+    --line:rgba(243,234,214,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1200px;height:1200px}
+  body{
+    background:
+      radial-gradient(circle at 50% 46%, rgba(244,193,31,.14), transparent 46%),
+      linear-gradient(160deg,#0d0c0a 0%, #0a0a0a 55%, #060606 100%);
+    font-family:"Helvetica Neue", Arial, ui-sans-serif, system-ui, sans-serif;
+    color:var(--cream);
+    position:relative;
+    overflow:hidden;
+  }
+  .frame{position:relative;width:100%;height:100%;padding:66px;display:flex;flex-direction:column}
+
+  .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:36px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--yellow),var(--yellow-soft));position:relative;box-shadow:0 0 34px rgba(244,193,31,.5)}
+  .mark:after{content:"";position:absolute;inset:8px;border:2px solid #0a0a0a;border-radius:5px}
+  .brand-name{font-size:21px;font-weight:800;color:var(--cream)}
+  .brand-name b{color:var(--yellow)}
+  .headline{font-size:22px;font-weight:700;color:var(--cream-dim)}
+  .headline b{color:var(--cream)}
+
+  .stage{flex:1;display:grid;grid-template-columns:300px 1fr 300px;align-items:center;column-gap:10px}
+
+  .inputs{display:flex;flex-direction:column;gap:18px}
+  .in-card{
+    background:var(--panel);border:1px solid var(--line);border-radius:16px;
+    padding:18px 20px;display:flex;align-items:center;gap:14px;position:relative;
+  }
+  .in-card .ic{width:38px;height:38px;border-radius:10px;background:rgba(244,193,31,.12);border:1px solid rgba(244,193,31,.35);display:flex;align-items:center;justify-content:center;flex:none}
+  .in-card .ic svg{width:20px;height:20px}
+  .in-card .tx div:first-child{font-size:16px;font-weight:700;color:var(--cream)}
+  .in-card .tx div:last-child{font-size:12.5px;color:var(--cream-dim);margin-top:2px}
+  .in-card .beam{position:absolute;right:-40px;top:50%;width:40px;height:2px;background:linear-gradient(90deg,rgba(244,193,31,.65),rgba(244,193,31,0))}
+
+  .engine-wrap{display:flex;align-items:center;justify-content:center;position:relative;height:100%}
+  .rings{position:absolute;width:420px;height:420px;border-radius:50%;border:1px solid rgba(244,193,31,.16)}
+  .rings.r2{width:340px;height:340px;border-color:rgba(244,193,31,.24)}
+  .engine{
+    width:250px;height:250px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, var(--yellow-soft), var(--yellow) 55%, #b8860f 100%);
+    box-shadow:0 0 120px rgba(244,193,31,.55), inset 0 0 40px rgba(0,0,0,.25);
+    display:flex;align-items:center;justify-content:center;flex-direction:column;
+    color:#0a0a0a;text-align:center;
+  }
+  .engine .label{font-size:12.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
+  .engine .name{font-size:30px;font-weight:900;letter-spacing:-.02em;margin-top:6px}
+  .engine .sub{font-size:12px;font-weight:700;margin-top:8px;opacity:.8}
+
+  .outputs{display:flex;flex-direction:column;gap:18px;align-items:stretch}
+  .out-card{
+    background:linear-gradient(135deg, rgba(244,193,31,.14), rgba(244,193,31,.03));
+    border:1px solid rgba(244,193,31,.4);border-radius:18px;padding:22px 22px;position:relative;
+  }
+  .out-card .beam{position:absolute;left:-40px;top:50%;width:40px;height:2px;background:linear-gradient(270deg,rgba(244,193,31,.65),rgba(244,193,31,0))}
+  .out-card .tag{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow)}
+  .out-card .value{font-size:34px;font-weight:900;letter-spacing:-.02em;margin-top:6px;color:var(--cream)}
+  .out-card .note{font-size:12.5px;color:var(--cream-dim);margin-top:4px}
+
+  .bottom{margin-top:34px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:26px}
+  .bottom p{font-size:19px;font-weight:700;color:var(--cream);max-width:760px;line-height:1.35}
+  .bottom p b{color:var(--yellow)}
+  .cta{font-size:15px;font-weight:800;color:#0a0a0a;background:linear-gradient(100deg,var(--yellow),var(--yellow-soft));padding:14px 22px;border-radius:12px;white-space:nowrap}
+</style>
+</head>
+<body>
+<div class="frame">
+  <div class="top">
+    <div class="brand"><span class="mark"></span><span class="brand-name">J<b>E</b>V</span></div>
+    <div class="headline">From scattered paperwork to an <b>accurate cost position</b> — instantly.</div>
+  </div>
+
+  <div class="stage">
+    <div class="inputs">
+      <div class="in-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#f4c11f" stroke-width="2"><path d="M6 3h9l3 3v15H6z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></span><div class="tx"><div>Supplier quotes</div><div>Line items &amp; pricing</div></div><span class="beam"></span></div>
+      <div class="in-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#f4c11f" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 9v11"/></svg></span><div class="tx"><div>Site progress</div><div>Photos &amp; % complete</div></div><span class="beam"></span></div>
+      <div class="in-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#f4c11f" stroke-width="2"><path d="M4 6h16v12H4z"/><path d="M4 6l8 7 8-7"/></svg></span><div class="tx"><div>Invoices &amp; emails</div><div>Unstructured inbox data</div></div><span class="beam"></span></div>
+    </div>
+
+    <div class="engine-wrap">
+      <div class="rings"></div>
+      <div class="rings r2"></div>
+      <div class="engine">
+        <span class="label">Decision engine</span>
+        <span class="name">JEV</span>
+        <span class="sub">Scoring probability, live</span>
+      </div>
+    </div>
+
+    <div class="outputs">
+      <div class="out-card"><span class="beam"></span><div class="tag">Cost position</div><div class="value">$482,300</div><div class="note">Reconciled against 64% job complete</div></div>
+      <div class="out-card"><span class="beam"></span><div class="tag">Confidence</div><div class="value">97.4%</div><div class="note">Scored against what's already known</div></div>
+      <div class="out-card"><span class="beam"></span><div class="tag">Time to answer</div><div class="value">0.1 sec</div><div class="note">No chasing paperwork</div></div>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <p>This is what <b>AI at scale</b> actually looks like — faster decisions, lower token cost, real money saved.</p>
+    <span class="cta">Book a slot on my calendar →</span>
+  </div>
+</div>
+</body>
+</html>

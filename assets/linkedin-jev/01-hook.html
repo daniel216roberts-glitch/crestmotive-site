@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  :root{
+    --black:#0a0a0a;
+    --black-2:#151412;
+    --yellow:#f4c11f;
+    --yellow-soft:#f9d666;
+    --cream:#f3ead6;
+    --cream-dim:#c9c0ab;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1200px;height:1200px}
+  body{
+    background:
+      radial-gradient(circle at 85% 8%, rgba(244,193,31,.16), transparent 42%),
+      radial-gradient(circle at 6% 96%, rgba(244,193,31,.08), transparent 38%),
+      linear-gradient(160deg,#0d0c0a 0%, #0a0a0a 55%, #060606 100%);
+    font-family: "Helvetica Neue", Arial, ui-sans-serif, system-ui, sans-serif;
+    color:var(--cream);
+    position:relative;
+    overflow:hidden;
+  }
+  .noise{position:absolute;inset:0;opacity:.05;background-image:radial-gradient(rgba(255,255,255,.6) 1px, transparent 1px);background-size:3px 3px}
+  .frame{position:relative;width:100%;height:100%;padding:74px;display:flex;flex-direction:column;justify-content:space-between}
+
+  .top{display:flex;align-items:center;justify-content:space-between}
+  .brand{display:flex;align-items:center;gap:14px}
+  .mark{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--yellow),var(--yellow-soft));position:relative;box-shadow:0 0 46px rgba(244,193,31,.55)}
+  .mark:after{content:"";position:absolute;inset:9px;border:2px solid #0a0a0a;border-radius:6px}
+  .brand-name{font-size:26px;font-weight:800;letter-spacing:.02em;color:var(--cream)}
+  .brand-name b{color:var(--yellow)}
+  .pill{border:1px solid rgba(243,234,214,.25);color:var(--cream-dim);font-size:15px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:9px 18px;border-radius:999px}
+
+  .mid{max-width:1000px}
+  .eyebrow{display:flex;align-items:center;gap:10px;color:var(--yellow);font-weight:800;font-size:18px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:26px}
+  .eyebrow:before{content:"";width:30px;height:2px;background:var(--yellow)}
+  h1{
+    font-size:76px;
+    line-height:1.04;
+    font-weight:800;
+    letter-spacing:-.03em;
+    color:var(--cream);
+  }
+  h1 .fade{color:var(--cream-dim)}
+  h1 .hi{
+    color:var(--black);
+    background:linear-gradient(100deg,var(--yellow),var(--yellow-soft));
+    padding:2px 14px;
+    border-radius:8px;
+    box-shadow:0 0 60px rgba(244,193,31,.35);
+    display:inline;
+    box-decoration-break:clone;
+    -webkit-box-decoration-break:clone;
+  }
+
+  .bottom{display:flex;align-items:flex-end;justify-content:space-between}
+  .stat{display:flex;gap:46px}
+  .stat div{display:flex;flex-direction:column;gap:6px}
+  .stat strong{font-size:40px;font-weight:800;color:var(--yellow);letter-spacing:-.02em}
+  .stat span{font-size:15px;color:var(--cream-dim);letter-spacing:.04em}
+  .divider{width:1px;background:rgba(243,234,214,.18)}
+  .cue{font-size:16px;color:var(--cream-dim);font-weight:600;letter-spacing:.04em;max-width:230px;text-align:right}
+</style>
+</head>
+<body>
+<div class="noise"></div>
+<div class="frame">
+  <div class="top">
+    <div class="brand"><span class="mark"></span><span class="brand-name">J<b>E</b>V</span></div>
+    <span class="pill">AI Decision Engine</span>
+  </div>
+
+  <div class="mid">
+    <div class="eyebrow">Sitting idle right now</div>
+    <h1>Your quotes, invoices and site updates are <span class="fade">just sitting there.</span></h1>
+    <h1 style="margin-top:18px">JEV turns them into <span class="hi">cost certainty</span> in 0.1 seconds.</h1>
+  </div>
+
+  <div class="bottom">
+    <div class="stat">
+      <div><strong>0.1s</strong><span>DECISION TIME</span></div>
+      <div class="divider"></div>
+      <div><strong>90%</strong><span>FASTER THAN AN LLM</span></div>
+    </div>
+    <div class="cue">Real-time cost position for construction &amp; property businesses →</div>
+  </div>
+</div>
+</body>
+</html>
