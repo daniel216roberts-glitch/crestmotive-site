@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  :root{
+    --black:#0a0a0a;
+    --yellow:#f4c11f;
+    --yellow-soft:#f9d666;
+    --cream:#f3ead6;
+    --cream-dim:#a79f8d;
+    --panel:#141310;
+    --line:rgba(243,234,214,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1200px;height:1200px}
+  body{
+    background:
+      radial-gradient(circle at 88% 4%, rgba(244,193,31,.14), transparent 40%),
+      radial-gradient(circle at 4% 100%, rgba(244,193,31,.08), transparent 38%),
+      linear-gradient(160deg,#0d0c0a 0%, #0a0a0a 55%, #060606 100%);
+    font-family:"Helvetica Neue", Arial, ui-sans-serif, system-ui, sans-serif;
+    color:var(--cream);
+    position:relative;
+    overflow:hidden;
+  }
+  .frame{position:relative;width:100%;height:100%;padding:60px 64px;display:flex;flex-direction:column}
+
+  .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--yellow),var(--yellow-soft));position:relative;box-shadow:0 0 34px rgba(244,193,31,.5)}
+  .mark:after{content:"";position:absolute;inset:8px;border:2px solid #0a0a0a;border-radius:5px}
+  .brand-name{font-size:21px;font-weight:800;color:var(--cream)}
+  .brand-name b{color:var(--yellow)}
+  .pill{border:1px solid rgba(243,234,214,.25);color:var(--cream-dim);font-size:14px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:8px 16px;border-radius:999px}
+
+  .head{margin:22px 0 26px}
+  .eyebrow{display:flex;align-items:center;gap:10px;color:var(--yellow);font-weight:800;font-size:16px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:14px}
+  .eyebrow:before{content:"";width:26px;height:2px;background:var(--yellow)}
+  h1{font-size:46px;line-height:1.08;font-weight:800;letter-spacing:-.025em;max-width:1000px}
+
+  .grid{flex:1;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);gap:16px}
+  .card{
+    background:var(--panel);border:1px solid var(--line);border-radius:18px;
+    padding:22px 24px;display:flex;flex-direction:column;gap:10px;justify-content:center;
+    position:relative;overflow:hidden;
+  }
+  .card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--yellow),transparent)}
+  .card .ic{width:40px;height:40px;border-radius:10px;background:rgba(244,193,31,.12);border:1px solid rgba(244,193,31,.35);display:flex;align-items:center;justify-content:center;flex:none}
+  .card .ic svg{width:21px;height:21px}
+  .card h3{font-size:20px;font-weight:800;color:var(--cream);letter-spacing:-.01em;margin-top:4px}
+  .card ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+  .card li{font-size:14.5px;color:var(--cream-dim);line-height:1.35;padding-left:14px;position:relative}
+  .card li:before{content:"";position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--yellow)}
+
+  .bottom{margin-top:22px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:22px}
+  .bottom p{font-size:18px;font-weight:700;color:var(--cream);max-width:700px;line-height:1.35}
+  .bottom p b{color:var(--yellow)}
+  .cta{font-size:15px;font-weight:800;color:#0a0a0a;background:linear-gradient(100deg,var(--yellow),var(--yellow-soft));padding:14px 22px;border-radius:12px;white-space:nowrap}
+</style>
+</head>
+<body>
+<div class="frame">
+  <div class="top">
+    <div class="brand"><span class="mark"></span><span class="brand-name">J<b>E</b>V</span></div>
+    <span class="pill">Use cases</span>
+  </div>
+
+  <div class="head">
+    <div class="eyebrow">Where the classifier pays for itself</div>
+    <h1>Six places JEV scores decisions across a construction or property business.</h1>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#f4c11f" stroke-width="2"><path d="M12 2v20M17 6.5c0-1.9-2.2-3.5-5-3.5s-5 1.4-5 3.2c0 4 10 1.8 10 5.8 0 1.9-2.2 3.5-5 3.5s-5-1.6-5-3.5"/></svg></span>
+      <h3>Cost &amp; financial control</h3>
+      <ul><li>Invoice-to-quote matching</li><li>Cost overrun &amp; cash flow risk scoring</li><li>Duplicate billing detection</li></ul>
+    </div>
+    <div class="card">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#f4c11f" stroke-width="2"><path d="M4 20h16M6 20V10l5-5 5 5v10"/></svg></span>
+      <h3>Site progress &amp; scheduling</h3>
+      <ul><li>Photo progress vs. milestones</li><li>Schedule slippage detection</li><li>Trade-readiness confirmation</li></ul>
+    </div>
+    <div class="card">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#f4c11f" stroke-width="2"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/></svg></span>
+      <h3>Procurement &amp; supply chain</h3>
+      <ul><li>Supplier quote triage</li><li>Late delivery prediction</li><li>Material substitution alerts</li></ul>
+    </div>
+    <div class="card">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#f4c11f" stroke-width="2"><path d="M12 3l8 4v5c0 5-3.4 8.4-8 9-4.6-.6-8-4-8-9V7z"/></svg></span>
+      <h3>Risk, compliance &amp; safety</h3>
+      <ul><li>Certificate &amp; insurance checks</li><li>Incident severity triage</li><li>Contract clause risk scoring</li></ul>
+    </div>
+    <div class="card">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#f4c11f" stroke-width="2"><path d="M4 6h16v12H4z"/><path d="M4 6l8 7 8-7"/></svg></span>
+      <h3>Communications &amp; admin</h3>
+      <ul><li>Inbox triage by type &amp; urgency</li><li>Blocking-RFI detection</li></ul>
+    </div>
+    <div class="card">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#f4c11f" stroke-width="2"><path d="M4 19h16M6 19v-5M11 19v-9M16 19v-6"/><path d="M6 10l5-5 3 3 5-5"/><path d="M17 3h3v3"/></svg></span>
+      <h3>Sales &amp; pipeline</h3>
+      <ul><li>Lead &amp; tender qualification</li><li>Thin-margin quote flagging</li></ul>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <p>Same mechanism every time: feed it the data, score it against <b>what's already known</b>, get a decision in 0.1 seconds.</p>
+    <span class="cta">Book a slot on my calendar →</span>
+  </div>
+</div>
+</body>
+</html>

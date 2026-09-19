@@ -11,3 +11,41 @@ Want to see how this could work in your business? Book a slot on my calendar tod
 ---
 Attach: 01-hook.png (feed image / lead slide)
 Attach: 02-decision-engine.png (second slide if posting as a multi-image / carousel)
+
+
+===========================================
+POST 2 — USE CASES SUMMARY
+===========================================
+
+Everyone's used to AI writing emails. Fewer people have seen what it looks like scoring a business decision in real time.
+
+Here's where a classifier like JEV actually earns its place in a construction or property business — not as a chatbot, but as the thing quietly checking your numbers against reality:
+
+💰 Cost & financial control
+→ Matching invoices against quotes, flagging cost overruns, catching duplicate billing, scoring cash flow risk
+
+🏗️ Site progress & scheduling
+→ Reading site photos against milestones, flagging schedule slippage, scoring weather delay exposure, confirming a trade is actually ready to start
+
+📦 Procurement & supply chain
+→ Triaging supplier quotes, predicting late deliveries, catching material substitutions before they become a problem
+
+⚠️ Risk, compliance & safety
+→ Checking certificates and insurances are current, triaging incident severity, scoring contract clauses for risk before you sign
+
+📧 Communications & admin
+→ Sorting inboxes by invoice / RFI / complaint / urgent, flagging which RFIs are actually blocking work
+
+📈 Sales & pipeline
+→ Qualifying leads and tenders by fit and win probability, flagging thin-margin quotes before they go out
+
+Same underlying mechanism every time: feed it structured and unstructured data, score it against what's already known, get a decision back in 0.1 seconds instead of a day of admin.
+
+That's the difference between running a business on gut feel and running it on real-time certainty.
+
+Want to see which of these would save you the most time? Book a slot on my calendar and let's map it against your operations 👇
+
+[calendar link]
+
+---
+Attach: 03-use-cases.png
